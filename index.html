@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<!-- Updated: December 2, 2025 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WTA 2024 Analysis</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 40px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+
+        h2 {
+            color: #34495e;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        h3 {
+            color: #34495e;
+            margin-top: 20px;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th {
+            background-color: #3498db;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+
+        td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .stat-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .stat-box .number {
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .stat-box .label {
+            font-size: 0.9em;
+        }
+
+        .figure-container {
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .figure-container img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            background: #f9f9f9;
+        }
+
+        .code-block {
+            background: #f4f4f4;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 15px 0;
+            overflow-x: auto;
+            border-radius: 4px;
+        }
+
+        code {
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+
+        .insight {
+            background: #e8f4f8;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1.4em;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>WTA 2024 Analysis</h1>
+        <p>A comprehensive analysis of the Women's Tennis Association 2024 Points Dataset, examining serve performance across different surfaces and tournaments.</p>
+
+        <h2>Project Overview</h2>
+        <p>This project analyzes point-by-point data from the 2024 WTA season, focusing on serve performance metrics and tournament statistics. The analysis includes data cleaning, statistical insights, and visualizations.</p>
+
+        <h2>Analysis Results</h2>
+
+        <h3>Key Statistics</h3>
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="number">55,457</div>
+                <div class="label">Total Game Rows</div>
+            </div>
+            <div class="stat-box">
+                <div class="number">57</div>
+                <div class="label">Tournaments</div>
+            </div>
+            <div class="stat-box">
+                <div class="number">2,558</div>
+                <div class="label">Matches</div>
+            </div>
+            <div class="stat-box">
+                <div class="number">54,821</div>
+                <div class="label">Service Games</div>
+            </div>
+        </div>
+
+        <h3>Games by Surface</h3>
+        <table>
+            <tr>
+                <th>Surface</th>
+                <th>Number of Games</th>
+            </tr>
+            <tr>
+                <td>Hard</td>
+                <td>33,830</td>
+            </tr>
+            <tr>
+                <td>Clay</td>
+                <td>15,065</td>
+            </tr>
+            <tr>
+                <td>Grass</td>
+                <td>6,562</td>
+            </tr>
+        </table>
+
+        <h3>Serve Hold Percentage by Surface</h3>
+        <table>
+            <tr>
+                <th>Surface</th>
+                <th>Hold Percentage</th>
+            </tr>
+            <tr>
+                <td>Grass</td>
+                <td>70.5%</td>
+            </tr>
+            <tr>
+                <td>Hard</td>
+                <td>66.0%</td>
+            </tr>
+            <tr>
+                <td>Clay</td>
+                <td>61.6%</td>
+            </tr>
+        </table>
+
+        <div class="insight">
+            <strong>Key Insight:</strong> Servers are significantly stronger on grass courts (70.5% hold rate), while clay courts are the most challenging for serving (61.6% hold rate).
+        </div>
+
+        <h2>Visualizations</h2>
+
+        <h3>Figure 1: Number of Games by Surface</h3>
+        <div class="figure-container">
+            <img src="Figure_1.png" alt="Games by Surface">
+        </div>
+
+        <h3>Figure 2: Serve Hold Percentage by Surface</h3>
+        <div class="figure-container">
+            <img src="Figure_2.png" alt="Hold Percentage by Surface">
+        </div>
+
+        <h3>Figure 3: Number of Games per Month (2024 WTA Season)</h3>
+        <div class="figure-container">
+            <img src="Figure_3.png" alt="Games per Month">
+        </div>
+
+        <h2>Top 10 Tournaments by Games</h2>
+        <table>
+            <tr>
+                <th>Rank</th>
+                <th>Tournament Name</th>
+                <th>Game Rows</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Australian Open</td>
+                <td>2,753</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>French Open</td>
+                <td>2,691</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Wimbledon</td>
+                <td>2,680</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>US Open</td>
+                <td>2,613</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Madrid</td>
+                <td>2,139</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Beijing</td>
+                <td>2,105</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Indian Wells</td>
+                <td>2,047</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Rome</td>
+                <td>1,997</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Miami</td>
+                <td>1,986</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Olympic Games</td>
+                <td>1,357</td>
+            </tr>
+        </table>
+
+        <h2>Key Findings</h2>
+
+        <h3>Serve Strength by Surface</h3>
+        <ul>
+            <li><strong>Grass:</strong> Players hold serve about 70.5% of the time</li>
+            <li><strong>Hard:</strong> Players hold serve about 66.0% of the time</li>
+            <li><strong>Clay:</strong> Players hold serve about 61.6% of the time</li>
+        </ul>
+
+        <h3>Insights & Observations</h3>
+        <ul>
+            <li><strong>Surface Advantage:</strong> The 9% difference in hold percentage between grass (70.5%) and clay (61.6%) suggests that surface characteristics significantly impact serve performance.</li>
+            <li><strong>Tournament Distribution:</strong> Grand Slams account for the highest number of game-rows, indicating comprehensive coverage of major tournaments.</li>
+            <li><strong>Hard Court Dominance:</strong> Hard courts represent the majority of games (33,830 out of 55,457), reflecting the prevalence in the WTA calendar.</li>
+        </ul>
+
+        <h2>Technologies Used</h2>
+        <ul>
+            <li>Python 3.13</li>
+            <li>pandas - Data manipulation and analysis</li>
+            <li>matplotlib - Visualization</li>
+            <li>seaborn - Statistical data visualization</li>
+            <li>openpyxl - Excel file handling</li>
+        </ul>
+
+        <h2>Files in This Repository</h2>
+        <ul>
+            <li><code>wta_analysis.py</code> - Main Python analysis script</li>
+            <li><code>2024-WTA-Women-Points-Dataset.xlsx</code> - Source dataset</li>
+            <li><code>Figure_1.png</code> - Games by surface visualization</li>
+            <li><code>Figure_2.png</code> - Hold percentage by surface visualization</li>
+            <li><code>Figure_3.png</code> - Games per month timeline</li>
+            <li><code>README.md</code> - Project documentation</li>
+        </ul>
+
+        <footer>
+            <p>WTA 2024 Points Dataset Analysis | Last Updated: December 2024</p>
+        </footer>
+    </div>
+</body>
+</html>
